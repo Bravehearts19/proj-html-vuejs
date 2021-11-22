@@ -3,12 +3,15 @@
 @import "variables.scss";
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    * { 
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 }
 /* Header component style */
 header {
+    padding-bottom: $spacing_xs;
     ul {
         list-style: none;
         padding: 0;
@@ -40,7 +43,77 @@ header {
     width: 100%;
     height: 3px;
     background-color: lightsalmon;
-    bottom: -10px;
+    bottom: -$spacing_s;
+}
+
+/* TodaysPick component style */
+.todays_pick_container {
+    background-color: lightgray;
+    height: 1000px;
+    position: relative;
+    .todays_pick_background_container {
+        background-image: url("./assets/single-post-img3.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 600px;
+        position: relative;
+        .article {
+            padding: $spacing_xl $spacing_l $spacing_m;
+            text-align: center;
+            background-color: white;
+            width: 30%;
+            border-radius: 8px;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translateX(-50%); 
+            position: relative;
+            h3 {
+                margin: 0;
+            }
+            p {
+                margin: 0;
+                margin-top: $spacing_s;
+                font-size: 12px;
+            }
+            .article_tag {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: $spacing_s;
+                border-radius: 8px;
+                background-color: orange;
+                color: white;
+            }
+        }
+    }
+    .articles_choices_container {
+        background-color: white;
+        position: absolute;
+        bottom: 10%;
+        width: 100%;
+        text-align: center;
+        width: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: $spacing_l $spacing_s $spacing_xl;
+        >h5 {
+            padding-bottom: $spacing_l;
+            margin-bottom: 0;
+        }
+        .article_card_container {
+            width: calc(100% / 3);
+            padding: 0 $spacing_m;
+            .image_container {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 /* Subscribe component style */
