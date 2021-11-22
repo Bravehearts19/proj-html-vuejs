@@ -1,0 +1,27 @@
+$spacing: (
+    2: 2px,
+    4: 4px,
+    6: 6px,
+    8: 8px,
+    10: 10px,
+    14: 14px,
+    16: 16px,
+    20: 20px,
+    24: 24px,
+    32: 32px,
+    36: 36px,
+    48: 48px,
+    60: 60px,
+    100: 100px
+);
+
+$spacing_min: map-get($spacing, 2);
+$spacing_xxs: map-get($spacing, 4);
+$spacing_xs: map-get($spacing, 6);
+$spacing_s: map-get($spacing, 8);
+$spacing_m: map-get($spacing, 16);
+$spacing_l: map-get($spacing, 24);
+$spacing_xl: map-get($spacing, 36);
+$spacing_xxl: map-get($spacing, 48);
+$spacing_huge: map-get($spacing, 60);
+$spacing_max: map-get($spacing, 100);

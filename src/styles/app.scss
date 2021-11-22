@@ -14,11 +14,11 @@ header {
         padding: 0;
         li {
             display: inline-block;
-            padding: 10px 14px;
+            padding: $spacing_m;
             a {
                 text-decoration: none;
                 color: gray;
-                padding: 6px;
+                padding: $spacing_xs;
                 &.active {
                     color: lightsalmon;
                     position: relative;
@@ -47,48 +47,48 @@ header {
 footer {
     .container {
         .logo_and_social_container {
-            padding-right: 16px;
+            padding-right: $spacing_m;
             ul {
-                margin-top: 14px;
+                margin-top: $spacing_m;
                 li {
                     display: inline-block;
-                    padding: 4px;
+                    padding: $spacing_xxs;
                     a {
-                        padding: 6px;
+                        padding: $spacing_xs;
                     }
                 }
             }
         }
         .footer_links_container {
-            padding-left: 48px;
+            padding-left: $spacing_xxl;
             ul {
                 li {
-                    padding-top: 8px;
-                    padding-bottom: 8px;
+                    padding-top: $spacing_s;
+                    padding-bottom: $spacing_s;
                 }
             }
         }
         .contact_container {
-            padding-right: 24px;
+            padding-right: $spacing_l;
             ul {
                 li {
-                    padding-top: 8px;
-                    padding-bottom: 8px;
+                    padding-top: $spacing_s;
+                    padding-bottom: $spacing_s;
                     div {
                         display: inline-block;
                         height: 100%;
-                        padding-right: 14px;
+                        padding-right: $spacing_m;
                     }
                 }
             }
         }
         .get_your_app_container {
             a {
-                margin-top: 2px;
-                margin-bottom: 2px;
+                margin-top: $spacing_min;
+                margin-bottom: $spacing_min;
                 img {
-                    padding-bottom: 6px;
-                    padding-top: 6px;
+                    padding-bottom: $spacing_xs;
+                    padding-top: $spacing_xs;
                 }
             }
         }
@@ -98,7 +98,7 @@ footer {
         
         .contact_container,
         .get_your_app_container {
-            padding-left: 36px;
+            padding-left: $spacing_xl;
             h4 {
                 color: lightsalmon;
                 text-transform: uppercase;
@@ -126,8 +126,8 @@ footer {
     .container-fluid {
         background-color: lightgray;
         border-top: 3px solid gray;
-        padding-top: 24px;
-        padding-bottom: 24px;
+        padding-top: $spacing_l;
+        padding-bottom: $spacing_l;
         a {
             text-decoration: none;
             color: gray;
