@@ -43,6 +43,42 @@ header {
     bottom: -10px;
 }
 
+/* Subscribe component style */
+.subscribe_container {
+    background-image: url("./assets/subscribe-sec-bg.png");
+    background-position: center;
+    background-size: cover;
+    /* background-size: contain;
+    background-repeat: repeat-y; */
+    .container {
+        width: 50%;
+        padding: $spacing_huge 0;
+
+        p {
+            margin: $spacing_l 0;
+        }
+        .mail_subscribtion_container {
+            margin: $spacing_xl 0;
+            input {
+                border-radius: 3px;
+                border: 2px solid gray;
+                padding: $spacing_m;
+                width: 400px;
+                margin-right: $spacing_m;
+            }
+            button {
+                border: none;
+                padding: $spacing_s $spacing_xl;
+                background-color: orange;
+                color: white;
+            }
+        }
+    }
+    img {
+        width: 25%;
+    }
+}
+
 /* Footer component style */
 footer {
     .container {
