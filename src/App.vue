@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <Header />
-    <Footer />
+    <Header :socialIconClassesList="socialIconClassesList"/>
+    <br>
+    <br>
+    <br>
+    <Footer :socialIconClassesList="socialIconClassesList"/>
   </div>
 </template>
 
@@ -14,6 +17,16 @@ export default {
   components: {
     Header,
     Footer,
+  },
+  data() {
+    return {     
+      socialIconClassesList: [
+        "fa-facebook",
+        "fa-instagram",
+        "fa-twitter",
+        "fa-youtube-play"
+      ],
+    }
   }
 }
 </script>

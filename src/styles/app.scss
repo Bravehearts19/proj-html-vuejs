@@ -2,9 +2,16 @@
 @import "~font-awesome/css/font-awesome.css";
 @import "variables.scss";
 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Header component style */
 header {
     ul {
         list-style: none;
+        padding: 0;
         li {
             display: inline-block;
             padding: 10px 14px;
@@ -14,7 +21,8 @@ header {
                 padding: 6px;
                 &.active {
                     color: lightsalmon;
-                }
+                    position: relative;
+                }   
             }
             button {
                 background-color: lightsalmon;
@@ -25,7 +33,6 @@ header {
         }
     }
 }
-
 .active::after {
     content: "";
     display: block;
@@ -33,5 +40,106 @@ header {
     width: 100%;
     height: 3px;
     background-color: lightsalmon;
-    bottom: -16px;
+    bottom: -10px;
+}
+
+/* Footer component style */
+footer {
+    .container {
+        .logo_and_social_container {
+            padding-right: 16px;
+            ul {
+                margin-top: 14px;
+                li {
+                    display: inline-block;
+                    padding: 4px;
+                    a {
+                        padding: 6px;
+                    }
+                }
+            }
+        }
+        .footer_links_container {
+            padding-left: 48px;
+            ul {
+                li {
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                }
+            }
+        }
+        .contact_container {
+            padding-right: 24px;
+            ul {
+                li {
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    div {
+                        display: inline-block;
+                        height: 100%;
+                        padding-right: 14px;
+                    }
+                }
+            }
+        }
+        .get_your_app_container {
+            a {
+                margin-top: 2px;
+                margin-bottom: 2px;
+                img {
+                    padding-bottom: 6px;
+                    padding-top: 6px;
+                }
+            }
+        }
+        
+        
+        
+        
+        .contact_container,
+        .get_your_app_container {
+            padding-left: 36px;
+            h4 {
+                color: lightsalmon;
+                text-transform: uppercase;
+    
+            }
+        }
+        .logo_and_social_container,
+        .footer_links_container,
+        .contact_container {
+            width: 25%;
+            border-right: 1px solid gray;
+            ul {
+                list-style: none;
+                padding: 0;
+                li {
+                    a {
+                        color: gray;
+                        text-decoration: none;
+                    }
+                } 
+            }
+        }
+    }
+
+    .container-fluid {
+        background-color: lightgray;
+        border-top: 3px solid gray;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        a {
+            text-decoration: none;
+            color: gray;
+            font-size: 30px;
+            position: absolute;
+            left: 100px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        span {
+            color: gray;
+            font-size: 10px;
+        }
+    }
 }

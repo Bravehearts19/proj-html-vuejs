@@ -11,7 +11,7 @@
                 </li>
            </ul>
             <ul class="ms-auto">
-                <li v-for="(icon, i) in headerSocialIconClassesList" :key="'icon' + i">
+                <li v-for="(icon, i) in socialIconClassesList" :key="'icon' + i">
                     <a href="#">
                         <i class="fa " :class="icon" aria-hidden="true"></i>
                     </a>
@@ -21,7 +21,7 @@
         <div class="text-center">
             <img src="@/assets/avada-food-logo.png" alt="">
         </div>
-        <navbar class="d-flex justify-content-center mt-3">
+        <div class="d-flex justify-content-center mt-3">
             <ul>
                 <li v-for="(navbarLink, i) in navbarLinksList" :key="'navbarLink' + i">
                     <a href="#" :class="i === currentNavbarLinkId ? 'active' : ''">{{ navbarLink }}</a>
@@ -32,21 +32,18 @@
                     </a>
                 </li>
             </ul>
-        </navbar>
+        </div>
     </header>
 </template>
 
 <script>
 export default {
     name: 'Header',
+    props: {
+        socialIconClassesList: Array,
+    },
     data() {
         return {
-            headerSocialIconClassesList: [
-                "fa-facebook",
-                "fa-instagram",
-                "fa-twitter",
-                "fa-youtube-play"
-            ],
             navbarLinksList: [
                 "Home",
                 "Recipes",
@@ -59,7 +56,7 @@ export default {
         }
     },
     computed: {
-        
+
     }
 }
 </script>
