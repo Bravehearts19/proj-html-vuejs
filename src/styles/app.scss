@@ -93,7 +93,6 @@ header {
         background-color: white;
         position: absolute;
         bottom: 10%;
-        width: 100%;
         text-align: center;
         width: 60%;
         left: 50%;
@@ -110,6 +109,76 @@ header {
                 width: 100%;
                 img {
                     width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* Recipes component style */
+.recipes_container_fluid {
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    .recipes_container {
+        width: 65%;
+        padding-bottom: $spacing_xxl;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .recipe_title_container {
+            text-align: center;
+            width: 50%;
+            padding-bottom: $spacing_xxl;
+            h4 {
+                padding-bottom: $spacing_l;
+            }
+        }
+        .recipe_cards_container {
+            column-gap: $spacing_xl;
+            display: flex;
+            .recipe_card {
+                width: calc(50% - $spacing_xl / 2);
+                img {
+                    width: 100%;
+                }
+                .recipe_card_text_container {
+                    background-color: white;
+                    padding: $spacing_m;
+                    h5 {
+                        padding-bottom: $spacing_s;
+                    }
+                    span {
+                        font-size: 13px;
+                    }
+                    p {
+                        height: 185px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 7;
+                        -webkit-box-orient: vertical;
+                        margin-bottom: $spacing_m;
+                        margin-top: $spacing_m;
+                        padding-top: $spacing_m;
+                        border-top: 1px dashed black;
+                    }
+                    button {
+                        border: 0;
+                        color: white;
+                        background-color: orange;
+                        padding: $spacing_s $spacing_l;
+                    }
+                }
+            }
+            .recipe_posters_container {
+                display: flex;
+                flex-wrap: wrap;
+                width: calc(50% - $spacing_xl / 2);
+                column-gap: $spacing_l;
+                row-gap: $spacing_l;
+                img {
+                    width: calc(50% - $spacing_l / 2);
                 }
             }
         }
