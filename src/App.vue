@@ -3,12 +3,16 @@
     <Header :socialIconClassesList="socialIconClassesList"/>
     <TodaysPick />
     <Recipes />
+    <CulinaryCollection />
+    <FarmToTable />
     <Subscribe />
     <Footer :socialIconClassesList="socialIconClassesList"/>
   </div>
 </template>
 
 <script>
+import CulinaryCollection from './components/CulinaryCollection.vue'
+import FarmToTable from './components/FarmToTable.vue'
 import Footer from './components/Footer.vue'
 import Header from './components/Header.vue'
 import Recipes from './components/Recipes.vue'
@@ -23,6 +27,8 @@ export default {
     Subscribe,
     TodaysPick,
     Recipes,
+    CulinaryCollection,
+    FarmToTable,
   },
   data() {
     return {     

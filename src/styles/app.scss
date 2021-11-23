@@ -121,8 +121,8 @@ header {
     display: flex;
     justify-content: center;
     .recipes_container {
-        width: 65%;
-        padding-bottom: $spacing_xxl;
+        width: calc(100% / 3 * 2);
+        padding-bottom: $spacing_max;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -180,6 +180,124 @@ header {
                 img {
                     width: calc(50% - $spacing_l / 2);
                 }
+            }
+        }
+    }
+}
+
+/* CulinaryCollection component style */
+.collection_container_fluid {
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    .collection_container {
+        width: calc(100% / 3 * 2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: $spacing_max;
+        .collection_title_container {
+            text-align: center;
+            width: 50%;
+            padding-bottom: $spacing_xxl;
+            h4 {
+                padding-bottom: $spacing_l;
+            }
+        }
+        .collection_cards_container {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: $spacing_xl;
+            row-gap: $spacing_xl;
+            .collection_card {
+                width: calc((100% / 4) - ($spacing_xl / 4 * 3));
+                aspect-ratio: 150 / 98;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                img {
+                    width: 33%;
+                    padding-bottom: $spacing_m;
+                }
+            }
+        }
+    }
+}
+
+/* FarmToTable component style */
+.farm_to_table_container_fluid {
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    padding-bottom: $spacing_max;
+    .farm_to_table_container {
+        width: calc(100% / 3 * 2);
+        .upper_farm_to_table_container {
+            display: flex;
+            .farm_to_table_title_container {
+                width: 50%;
+                padding-bottom: $spacing_xxl;
+                h4 {
+                    padding-bottom: $spacing_l;
+                }
+            }
+            .button_container {
+                margin-left: auto;
+                button {
+                    border: none;
+                    color: white;
+                    background-color: orange;
+                    flex-grow: 0;
+                    padding: $spacing_s $spacing_m;
+                    font-size: 13px;
+                }
+            }
+        }
+        .bottom_farm_to_table_container {
+            display: flex;
+            column-gap: $spacing_xxl;
+            .left_bottom_farm_to_table_container {
+                width: calc(60% - ($spacing_xxl / 2));
+                .farm_to_table_card {
+                    width: 100%;
+                    margin-bottom: $spacing_xl;
+                    img {
+                        width: 100%;
+                    }
+                    .farm_to_table_card_text_container {
+                        background-color: white;
+
+                    }
+                }
+                .article_card_container {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    column-gap: $spacing_xl;
+                    row-gap: $spacing_xl;
+                    .article_card {
+                        background-color: white;
+                        padding: $spacing_m;
+                        width: calc((100% - $spacing_xl) / 2);
+                        text-align: center;
+                        cursor: pointer;
+                        .image_container {
+                            width: 100%;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .right_bottom_farm_to_table_container {
+                width: calc(100% / 3 - ($spacing_xxl / 2));
             }
         }
     }
