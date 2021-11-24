@@ -36,6 +36,7 @@
                             <p>{{ article.info }}</p>
                         </div>
                     </div>
+                    <button type="button">LOAD MORE POSTS</button>
                 </div>
                 <div class="right_bottom_farm_to_table_container">
                     <div class="view_recipes_container">
@@ -130,20 +131,14 @@ export default {
         return {
              articlesList: [
                 {
-                    imageUrl: require('../assets/single-post-img3.jpg'),
-                    title: "Food Corner: Top Japanese Restaurants for Sushi",
-                    info: "By admin | March 25th, 2019",
-                    text: "Suspendisse at semper odio. Nam fringilia scelerisque tincidunt. Orci varius natoque penattibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odi non feugiat sollicitudin. Integer vitae elementum ex. Sed portitor, diam eget convallis voluptat, arcu tellus facilisis nulla, id dignissim oro leo id.",
-                },
-                {
                     imageUrl: require('../assets/fi-roundup.jpg'),
                     title: "Roundup: My New Favourite Recipes For Healthy Living",
                     info: "By admin | March 25th, 2019",
                     text: "Suspendisse at semper odio. Nam fringilia scelerisque tincidunt. Orci varius natoque penattibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odi non feugiat sollicitudin. Integer vitae elementum ex. Sed portitor, diam eget convallis voluptat, arcu tellus facilisis nulla, id dignissim oro leo id.",
                 },
                 {
-                    imageUrl: require('../assets/fi-toasts.jpg'),
-                    title: "Why These Toasts with Tea are My New Favourite",
+                    imageUrl: require('../assets/fi-korean-food.jpg'),
+                    title: "Meal Prep: Korean Bibimbap with Kimchi",
                     info: "By admin | March 25th, 2019",
                     text: "Suspendisse at semper odio. Nam fringilia scelerisque tincidunt. Orci varius natoque penattibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odi non feugiat sollicitudin. Integer vitae elementum ex. Sed portitor, diam eget convallis voluptat, arcu tellus facilisis nulla, id dignissim oro leo id.",
                 },
@@ -154,29 +149,23 @@ export default {
                     text: "Suspendisse at semper odio. Nam fringilia scelerisque tincidunt. Orci varius natoque penattibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odi non feugiat sollicitudin. Integer vitae elementum ex. Sed portitor, diam eget convallis voluptat, arcu tellus facilisis nulla, id dignissim oro leo id.",
                 },
                 {
-                    imageUrl: require('../assets/fi-toasts.jpg'),
-                    title: "Why These Toasts with Tea are My New Favourite",
+                    imageUrl: require('../assets/fi-street-food.jpg'),
+                    title: "Exploring Street Food in Bangkok",
                     info: "By admin | March 25th, 2019",
                     text: "Suspendisse at semper odio. Nam fringilia scelerisque tincidunt. Orci varius natoque penattibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odi non feugiat sollicitudin. Integer vitae elementum ex. Sed portitor, diam eget convallis voluptat, arcu tellus facilisis nulla, id dignissim oro leo id.",
                 },
                 {
-                    imageUrl: require('../assets/fi-toasts.jpg'),
-                    title: "Why These Toasts with Tea are My New Favourite",
+                    imageUrl: require('../assets/fi-organic-breakfast.jpg'),
+                    title: "Organic Choices For Healthier Living",
                     info: "By admin | March 25th, 2019",
                     text: "Suspendisse at semper odio. Nam fringilia scelerisque tincidunt. Orci varius natoque penattibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odi non feugiat sollicitudin. Integer vitae elementum ex. Sed portitor, diam eget convallis voluptat, arcu tellus facilisis nulla, id dignissim oro leo id.",
                 },
                 {
-                    imageUrl: require('../assets/fi-toasts.jpg'),
-                    title: "Why These Toasts with Tea are My New Favourite",
+                    imageUrl: require('../assets/fi-water-side-rest.jpg'),
+                    title: "5 Waterside Restaurants in Instanbul for Special Events",
                     info: "By admin | March 25th, 2019",
                     text: "Suspendisse at semper odio. Nam fringilia scelerisque tincidunt. Orci varius natoque penattibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odi non feugiat sollicitudin. Integer vitae elementum ex. Sed portitor, diam eget convallis voluptat, arcu tellus facilisis nulla, id dignissim oro leo id.",
                 },
-                {
-                    imageUrl: require('../assets/fi-toasts.jpg'),
-                    title: "Why These Toasts with Tea are My New Favourite",
-                    info: "By admin | March 25th, 2019",
-                    text: "Suspendisse at semper odio. Nam fringilia scelerisque tincidunt. Orci varius natoque penattibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odi non feugiat sollicitudin. Integer vitae elementum ex. Sed portitor, diam eget convallis voluptat, arcu tellus facilisis nulla, id dignissim oro leo id.",
-                }
             ],
             selectedArticle: {
                 imageUrl: require('../assets/single-post-img3.jpg'),

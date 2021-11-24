@@ -11,28 +11,66 @@ body {
 }
 /* Header component style */
 header {
-    padding-bottom: $spacing_xs;
-    ul {
-        list-style: none;
-        padding: 0;
-        li {
-            display: inline-block;
-            padding: $spacing_m;
-            a {
-                text-decoration: none;
-                color: gray;
-                padding: $spacing_xs;
-                &.active {
-                    color: lightsalmon;
-                    position: relative;
-                }   
+    position: relative;
+    .container {
+        padding-bottom: $spacing_xs;
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                display: inline-block;
+                padding: $spacing_m;
+                a {
+                    text-decoration: none;
+                    color: gray;
+                    padding: $spacing_xs;
+                    &.active {
+                        color: lightsalmon;
+                        position: relative;
+                    }   
+                }
+                button {
+                    background-color: lightsalmon;
+                    color: white;
+                    border-radius: 6px;
+                    padding: $spacing_xxs;
+                    border: 0;
+                }
             }
-            button {
-                background-color: lightsalmon;
-                color: white;
-                border-radius: 6px;
-                border: 0;
-            }
+        }
+    }
+    .header_tag_container_p1,
+    .header_tag_container_p2 {
+        cursor: pointer;
+        position: absolute;
+        right: 12%;
+        background-color: whitesmoke;
+        color: gray;
+        display: flex;
+        flex-direction: column;
+        padding: $spacing_xs;
+        align-items: center;
+        justify-content: center;
+        height: 4rem;
+        aspect-ratio: 1 / 1;
+        border-radius: 6px;
+        box-shadow:  5px  5px 5px rgba($color: #000000, $alpha: 0.6);
+        p {
+            font-size: 13px;
+        }
+    }
+    .header_tag_container_p1 {
+        top: 53%;
+        z-index: 200;
+        i {
+            font-size: 30px;
+        }
+    }
+    .header_tag_container_p2 {
+        top: 85%;
+        z-index: 200;
+        h5 {
+            color: green;
         }
     }
 }
@@ -105,6 +143,7 @@ header {
         .article_card_container {
             width: calc(100% / 3);
             padding: 0 $spacing_m;
+            cursor: pointer;
             .image_container {
                 width: 100%;
                 img {
@@ -179,6 +218,7 @@ header {
                 row-gap: $spacing_l;
                 img {
                     width: calc(50% - $spacing_l / 2);
+                    cursor: pointer;
                 }
             }
         }
@@ -317,6 +357,14 @@ header {
                         }
                     }
                 }
+                >button {
+                    background-color: rgb(154, 154, 154);
+                    border: 0;
+                    color: black;
+                    padding: $spacing_m $spacing_l;
+                    width: 100%;
+                    margin-top: $spacing_xl;
+                }
             }
             .right_bottom_farm_to_table_container {
                 width: calc(40% - ($spacing_xxl / 2));
@@ -416,15 +464,16 @@ header {
                             align-items: center;
                             margin-bottom: $spacing_m;
                             .image_container {
-                                width: 30%;
+                                width: 20%;
                                 aspect-ratio: 1 / 1;
                                 border-radius: 50%;
                                 margin: $spacing_s;
                                 object-fit: contain;
+                                flex-shrink: 0;
+                                overflow: hidden;
+                                object-position: center;
                                 img {
-                                    aspect-ratio: 1 / 1;
-                                    width: 100%;
-                                    border-radius: 50%;
+                                    height: 100%;
                                 }
                             }
                             .mini_article_text_container {
