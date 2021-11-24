@@ -269,7 +269,25 @@ header {
                     }
                     .farm_to_table_card_text_container {
                         background-color: white;
-
+                        padding: $spacing_xl;
+                        h5 {
+                            padding-bottom: $spacing_xs;
+                        }
+                        span {
+                            font-size: 12px;
+                        }
+                        p {
+                            padding-top: $spacing_m;
+                            margin-top: $spacing_m;
+                            padding-bottom: $spacing_m;
+                            border-top: 1px dashed black;
+                        }
+                        .d-flex {
+                            a {
+                                text-decoration: none;
+                                color: black;
+                            }
+                        }
                     }
                 }
                 .article_card_container {
@@ -290,6 +308,10 @@ header {
                                 width: 100%;
                             }
                         }
+                        h5 {
+                            font-size: 17px;
+                            padding: $spacing_s;
+                        }
                         p {
                             font-size: 12px;
                         }
@@ -297,7 +319,206 @@ header {
                 }
             }
             .right_bottom_farm_to_table_container {
-                width: calc(100% / 3 - ($spacing_xxl / 2));
+                width: calc(40% - ($spacing_xxl / 2));
+                display: flex;
+                flex-direction: column;
+                .view_recipes_container {
+                    background-image: url('./assets/ad-bg.jpg');
+                    width: 100%;
+                    background-size: contain;
+                    aspect-ratio: 720 / 950;
+                    position: relative;
+                    cursor: pointer;
+                    text-align: center;
+                    margin-bottom:  $spacing_xxl;
+                    h3 {
+                        position: absolute;
+                        width: 40%;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                .city_guides_container {
+                    width: 100%;
+                    object-fit: contain;
+                    position: relative;
+                    cursor: pointer;
+                    img {
+                        width: 100%;
+                    }
+                    .city_guide_info {
+                        background-color: black;
+                        color: white;
+                        width: calc(100% / 3 * 2);
+                        position: absolute;
+                        left: 0;
+                        top: 45%;
+                        padding: $spacing_s;
+                        h4 {
+                            font-size: 22px;
+                        }
+                    }
+                    .city_guide_bottom_tag {
+                        background-color: orange;
+                        color: white;
+                        text-align: center;
+                        padding: $spacing_m;
+                        text-transform: uppercase;
+                    }
+                    .div_with_border {
+                        width: 100%;
+                        padding-bottom: $spacing_xxl;
+                        border-bottom: 1px solid black;
+                        margin-bottom: $spacing_xxl;
+                    }
+                }
+                .social_section_container {
+                    input {
+                        width: 100%;
+                        border-radius: 4px;
+                        padding: $spacing_m;
+                        margin-bottom: $spacing_l;
+                    }
+                    >h6 {
+                        color: orange;
+                        margin-bottom: $spacing_l;
+                    }
+                    .social_icons_container_row {
+                        margin-bottom: $spacing_xl;
+                        .social_icon_container {
+                            display: inline-block;
+                            margin-right: $spacing_l;
+                            background-color: rgb(172, 172, 172);
+                            border-radius: 8px;
+                            aspect-ratio: 1 / 1;
+                            height: 2rem;
+                            position: relative;
+                            a {
+                                padding: $spacing_s;
+                                text-decoration: none;
+                                color: gray;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        }
+                    }
+                    .btn-group {
+                        width: 100%;
+                        margin-bottom: $spacing_xl;
+                    }
+                    .mini_article_posts_container {
+                        margin-bottom: $spacing_l;
+                        .mini_article_post {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: $spacing_m;
+                            .image_container {
+                                width: 30%;
+                                aspect-ratio: 1 / 1;
+                                border-radius: 50%;
+                                margin: $spacing_s;
+                                object-fit: contain;
+                                img {
+                                    aspect-ratio: 1 / 1;
+                                    width: 100%;
+                                    border-radius: 50%;
+                                }
+                            }
+                            .mini_article_text_container {
+                                h6 {
+                                    padding: $spacing_s;
+                                    padding-bottom: $spacing_xs;
+                                }
+                                p {
+                                    padding: $spacing_s;
+                                    padding-top: $spacing_xs;
+                                }
+                            }
+                        }
+                    }
+                    .tweets_container {
+                        background-color: white;
+                        border-radius: 4px;
+                        padding: $spacing_m;
+                        .title_container {
+                            display: flex;
+                            align-items: center;
+                            h5 {
+                                font-size: 13px;
+                                strong {
+                                    font-size: 24px;
+                                }
+                                a {
+                                    font-size: 16px;
+                                    text-decoration: none;
+                                }
+                            }
+                            >a {
+                                text-decoration: none;
+                                color: gray;
+                            }
+                        }
+                        .tweet_post_container {
+                            display: flex;
+                            width: 100%;
+                            >.image_container {
+                                width: 12%;
+                                flex-shrink: 0;
+                                margin-right: $spacing_xs;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .tweet_post_text_container {
+                                >.align-items-center {
+                                    padding-bottom: $spacing_m;
+                                    div {
+                                        a {
+                                            text-decoration: none;
+                                        }
+                                    }
+                                    >a {
+                                        text-decoration: none;
+                                        color: lightgray;
+                                    }
+                                }
+                                p {
+                                    padding-bottom: $spacing_l;
+                                    a {
+                                        text-decoration: none;
+                                    }
+                                }
+                                .image_container {
+                                    width: 100%;
+                                    padding-bottom: $spacing_xs;
+                                    img { 
+                                        width: 100%;
+                                    }
+                                }
+                                .tweet_post_options_container {
+                                    display: flex;
+                                    align-items: center;
+                                    text-decoration: none;
+                                    color: lightgray;
+                                    div {
+                                        a {
+                                            margin-right: $spacing_m;
+                                        }
+                                    }
+                                    a {
+                                        text-decoration: none;
+                                        color: gray;
+                                        padding: $spacing_s;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
             }
         }
     }

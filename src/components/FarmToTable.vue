@@ -20,7 +20,10 @@
                             <p>
                                 {{ selectedArticle.text }}
                             </p>
-                            <button type="button">LEARN MORE</button>
+                            <div class="d-flex">
+                                <a href="#">Read more ></a>
+                                <a class="ms-auto" href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 0</a>
+                            </div>
                         </div>
                     </div>
                     
@@ -35,7 +38,85 @@
                     </div>
                 </div>
                 <div class="right_bottom_farm_to_table_container">
+                    <div class="view_recipes_container">
+                        <h3>VIEW OUR LATEST RECIPES</h3>
+                    </div>
+                    <div class="city_guides_container">
+                        <img :src="require('../assets/singapore-featured-image.jpg')" alt="">
+                        <div class="city_guide_info">
+                            <h4>City Guide: Singapore</h4>
+                        </div>
+                        <div class="city_guide_bottom_tag">
+                            <p><i class="fa fa-globe" aria-hidden="true"></i> View all city guides</p>
+                        </div>
+                        <div class="div_with_border"></div>
+                    </div>
+                    <div class="social_section_container">
+                        <input type="text" placeholder="Search...">
+                        <h6>Follow Us</h6>
+                        <div class="social_icons_container_row">
+                            <div class="social_icon_container" v-for="(icon, i) in socialIconClassesList" :key="'socialIcon' + i">
+                                <a href="#">
+                                    <i class="fa " :class="icon"></i>
+                                </a>
+                            </div>
+                        </div>
 
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="btnradio1">Popular</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btnradio2">Recent</label>
+                        </div>
+
+                        <div class="mini_article_posts_container">
+                            <div class="mini_article_post" v-for="(miniArticle, i) in articlesList" :key="'miniArticle' + i">
+                                <div class="image_container">
+                                    <img :src="miniArticle.imageUrl" alt="">
+                                </div>
+                                <div class="mini_article_text_container">
+                                    <h6>{{ miniArticle.title }}</h6>
+                                    <p>{{ miniArticle.info }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tweets_container">
+                            <div class="title_container">
+                                <h5><strong>Tweets</strong> by <a href="#">@Team_Fusion</a></h5>
+                                <a class="ms-auto" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="tweet_post_container">
+                                <div class="image_container">
+                                    <img src="../assets/3a74ce3d0532b7773b174c45ca3bd05a_bigger.png" alt="">
+                                </div>
+                                <div class="tweet_post_text_container">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <h6>Theme Fusion</h6>
+                                            <a href="#">@Theme_Fusion</a>
+                                        </div>
+                                        <a class="ms-auto" href="#"><i class="fa fa-twitter"></i></a>
+                                    </div>
+                                    <p>
+                                        Do you need sublime Wordpress hosting for your next website? Take advantage for exclusive partner offers that we have secured just for you, &amp; launch your site in seconds with <a href="#">#avada</a> on WP Engine hosting &amp; get 30% Off this Black Friday <br>
+                                        <a href="#">brt.ly/3lqLLE2</a> <a href="#">#BlackFriday2021</a>
+                                    </p>
+                                    <div class="image_container">
+                                        <img src="../assets/En2TRxLW4AEiWUN.jpeg" alt="">
+                                    </div>
+                                    <div class="tweet_post_options_container">
+                                        <div>
+                                            <a href="#"><i class="fa fa-heart-o"></i></a>
+                                            <a href="#"><i class="fa fa-sign-out"></i></a>
+                                        </div>
+                                        <a class="ms-auto" href="#">21 <i class="fa fa-thumbs-o-up"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -103,6 +184,13 @@ export default {
                 info: "By admin | March 25th, 2019",
                 text: "Suspendisse at semper odio. Nam fringilia scelerisque tincidunt. Orci varius natoque penattibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odi non feugiat sollicitudin. Integer vitae elementum ex. Sed portitor, diam eget convallis voluptat, arcu tellus facilisis nulla, id dignissim oro leo id.",
             },
+            socialIconClassesList: [
+                "fa-facebook",
+                "fa-instagram",
+                "fa-twitter",
+                "fa-youtube-play",
+                "fa-pinterest"
+            ],
         }
     }
 }
