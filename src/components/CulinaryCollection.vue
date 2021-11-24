@@ -8,7 +8,9 @@
             <div class="collection_cards_container">
                 <div class="collection_card" v-for="(collection, i) in collectionsList" :key="'collection' + i">
                     <img :src="collection.imgUrl" alt="">
-                    <h6>{{ collection.title }}</h6>
+                    <div>
+                        <h6>{{ collection.title }}</h6>
+                    </div>
                 </div>
             </div>
         </div>

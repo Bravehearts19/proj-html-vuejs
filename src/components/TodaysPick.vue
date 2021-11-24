@@ -13,8 +13,9 @@
             <h5>FOODIE JOURNAL</h5>
             <div class="d-flex">
                 <div class="article_card_container" v-for="(article, i) in articlesList" :key="'article' + i">
-                    <div class="image_container">
+                    <div class="image_container hover_card_image">
                         <img :src="article.imageUrl" alt="">
+                        <HoverLink :title="article.title"/>
                     </div>
                     <h5>{{ article.title }}</h5>
                     <p>{{ article.info }}</p>
@@ -25,8 +26,13 @@
 </template>
 
 <script>
+import HoverLink from './HoverLink.vue'
+
 export default {
     name: 'TodaysPick',
+    components: {
+        HoverLink,
+    },
     data() {
         return {
             articlesList: [

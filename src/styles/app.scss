@@ -254,6 +254,7 @@ header {
                 aspect-ratio: 150 / 98;
                 background-color: white;
                 display: flex;
+                padding-top: $spacing_m;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -261,6 +262,17 @@ header {
                 img {
                     width: 33%;
                     padding-bottom: $spacing_m;
+                }
+                div {
+                    text-align: center;
+                    width: 100%;
+                    padding: $spacing_m;
+                }
+            }
+            .collection_card:hover {
+                div {
+                    color: white;
+                    background-color: orange;
                 }
             }
         }
@@ -707,5 +719,40 @@ footer {
             color: gray;
             font-size: 10px;
         }
+    }
+}
+
+/* HoverLink component style */
+.hover_card_image {
+    position: relative;
+}
+.hover_card_image:hover .overlay {
+    display: flex;
+}
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    background-color: rgba($color: orange, $alpha: 0.6);
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .icon_container {
+        color: orange;
+        background-color: white;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        height: 2rem;
+        font-size: 24px;
+        padding-bottom: $spacing_m;
+    }
+    h5 {
+        text-align: center;
+        width: 70%;
     }
 }
